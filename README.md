@@ -1,2 +1,2 @@
 # iOS_Netflix
-Netflix clone
+Netflix iOS Project With Appwrite

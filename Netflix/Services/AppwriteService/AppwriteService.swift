@@ -20,11 +20,11 @@ class AppwriteService {
   
   init() {
     client = Client()
-      .setEndpoint("https://demo.appwrite.io/v1")
-      .setProject("almostNetflix2")
+      .setEndpoint("http://localhost/v1")
+      .setProject("netflixProjectID")
       .setSelfSigned()
     
-    // database = Database(client)
+    //database = Database(client)
     account = Account(client)
     storage = Storage(client)
     avatars = Avatars(client)

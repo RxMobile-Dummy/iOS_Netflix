@@ -1,15 +1,15 @@
 //
 //  HomeView.swift
-//  NetflixData
+//  Netflix
 //
-//  Created by Devangi Prajapati on 10/08/22.
+//  Created by Devangi Prajapati on 12/08/22.
 //
 
 import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Welcome")
     }
 }
 

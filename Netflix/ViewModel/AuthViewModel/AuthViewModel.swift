@@ -7,6 +7,7 @@
 
 import Foundation
 import Appwrite
+import Network
 
 class AuthVM: ObservableObject {
 
@@ -14,89 +15,95 @@ class AuthVM: ObservableObject {
   @Published var error: String?
   @Published var user: User?
 
-  static let shared = AuthVM()
+  static var shared = AuthVM()
 
-  init() {
-    getAccount()
+  init()  {
+    Task(priority: .medium){
+      do {
+        try await getAccount()
+      } catch let err {
+        self.error = err.localizedDescription
+      }
+    }
   }
 
-  
-
-  private func getAccount() {
-    error = ""
-    AppwriteService.shared.account.get() { result in
+  private func getAccount() async throws {
+    do {
+      let response = try await AppwriteService.shared.account.get()
       DispatchQueue.main.async {
-
         self.checkedForUser = true
-
-        switch result {
-        case .failure(let err):
-          self.error = err.message
-          self.user = nil
-        case .success(let user):
-          self.user = user
+        if(response.id != "") {
+          self.user = response
         }
-
       }
-    }
-  }
-
-  func create(name: String, email: String, password: String) {
-    error = ""
-    AppwriteService.shared.account.create(userId: "unique()", email: email, password: password, name: name) { result in
-      switch result {
-      case .failure(let err):
-        DispatchQueue.main.async {
-          print(err.message)
-          self.error = err.message
-        }
-      case .success:
-        self.login(email: email, password: password)
-      }
-    }
-  }
-
-  func logout() {
-    error = ""
-    AppwriteService.shared.account.deleteSession(sessionId: "current") { result in
+    } catch let err {
       DispatchQueue.main.async {
-        switch result {
-        case .failure(let err):
-          self.error = err.message
-        case .success(_):
-          self.user = nil
-          self.error = nil
-        }
-      }
-    }
-  }
-
-  func loginAnonymous() {
-    error = ""
-    AppwriteService.shared.account.createAnonymousSession() { result in
-      switch result {
-      case .failure(let err):
+        self.checkedForUser = true
         DispatchQueue.main.async {
-          self.error = err.message
+          self.error = err.localizedDescription
+          self.user = nil
         }
-      case .success:
-        self.getAccount()
       }
     }
   }
 
-  public func login(email: String, password: String) {
-    //        error = ""
-    //        AppwriteService.shared.account.createSession(email: email, password: password) { result in
-    //            switch result {
-    //            case .failure(let err):
-    //                DispatchQueue.main.async {
-    //                    self.error = err.message
-    //                }
-    //            case .success:
-    //                self.getAccount()
-    //            }
-    //        }
+  func create(name: String, email: String, password: String , completion: @escaping (Bool) -> Void) async  throws{
+    do {
+      let response : User  = try await AppwriteService.shared.account.create(userId: "unique()", email: email, password: password, name: name)
+      if(response.id != "") {
+        completion(true)
+        try await self.login(email: email, password: password, completion: { isSuccess in
+        })
+      }
+    } catch let err {
+      completion(false)
+      DispatchQueue.main.async {
+        self.error = err.localizedDescription
+        self.user = nil
+      }
+    }
   }
 
+  func logout() async throws {
+    do {
+      _ = try await AppwriteService.shared.account.deleteSession(sessionId: "current")
+      self.user = nil
+      self.error = nil
+    } catch let err {
+      DispatchQueue.main.async {
+        self.error = err.localizedDescription
+        self.user = nil
+      }
+    }
+  }
+
+  func loginAnonymous() async throws{
+    do {
+      let response = try await AppwriteService.shared.account.createAnonymousSession()
+      if(response.id != "") {
+        try await self.getAccount()
+      }
+    } catch let err {
+      DispatchQueue.main.async {
+        self.error = err.localizedDescription
+        self.user = nil
+      }
+    }
+  }
+
+  public func login(email: String, password: String , completion: @escaping (Bool) -> Void) async throws {
+    do {
+      let response = try await AppwriteService.shared.account.createEmailSession(email: email, password: password)
+      if(response.id != "") {
+        completion(true)
+        try await self.getAccount()
+      }
+    } catch let err {
+      completion(false)
+      DispatchQueue.main.async {
+        self.error = err.localizedDescription
+        self.user = nil
+      }
+    }
+  }
 }

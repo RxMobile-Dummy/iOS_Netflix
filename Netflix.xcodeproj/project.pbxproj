@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D658C62C28A62D2000001643 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = D658C62B28A62D2000001643 /* Appwrite */; };
+		D658C63028A6424C00001643 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658C62F28A6424C00001643 /* HomeView.swift */; };
 		D677F14128A3826300254521 /* NetflixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677F14028A3826300254521 /* NetflixApp.swift */; };
-		D677F14328A3826300254521 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677F14228A3826300254521 /* ContentView.swift */; };
 		D677F14528A3826500254521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D677F14428A3826500254521 /* Assets.xcassets */; };
 		D677F14828A3826500254521 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D677F14728A3826500254521 /* Preview Assets.xcassets */; };
 		D677F15228A3826500254521 /* NetflixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677F15128A3826500254521 /* NetflixTests.swift */; };
@@ -23,10 +24,15 @@
 		D677F18728A3828700254521 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D677F17728A3828600254521 /* Raleway-Light.ttf */; };
 		D677F18828A3828700254521 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D677F17828A3828600254521 /* Raleway-Black.ttf */; };
 		D677F18928A3828700254521 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D677F17928A3828600254521 /* Raleway-Bold.ttf */; };
-		D677F18A28A3828700254521 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677F17B28A3828600254521 /* HomeView.swift */; };
 		D677F18B28A3828700254521 /* AppwriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677F17E28A3828600254521 /* AppwriteService.swift */; };
 		D677F18C28A3828700254521 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677F18028A3828700254521 /* Model.swift */; };
-		D677F19228A3925700254521 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = D677F19128A3925700254521 /* Appwrite */; };
+		D6F0472B28A3BA9400C83469 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0472A28A3BA9400C83469 /* MainView.swift */; };
+		D6F0472D28A3BA9F00C83469 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0472C28A3BA9F00C83469 /* LoginView.swift */; };
+		D6F0472F28A3BAAC00C83469 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0472E28A3BAAC00C83469 /* SignUpView.swift */; };
+		D6F0473128A3BAEC00C83469 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0473028A3BAEC00C83469 /* SplashView.swift */; };
+		D6F0473428A3BB1700C83469 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0473328A3BB1700C83469 /* TitleView.swift */; };
+		D6F0473A28A3BFC000C83469 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0473928A3BFC000C83469 /* CustomTextField.swift */; };
+		D6F0473C28A3C2AF00C83469 /* CustomSecaureTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0473B28A3C2AF00C83469 /* CustomSecaureTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D658C62F28A6424C00001643 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D677F13D28A3826300254521 /* Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D677F14028A3826300254521 /* NetflixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixApp.swift; sourceTree = "<group>"; };
-		D677F14228A3826300254521 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D677F14428A3826500254521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D677F14728A3826500254521 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D677F14D28A3826500254521 /* NetflixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetflixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,9 +72,15 @@
 		D677F17728A3828600254521 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
 		D677F17828A3828600254521 /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
 		D677F17928A3828600254521 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
-		D677F17B28A3828600254521 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D677F17E28A3828600254521 /* AppwriteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppwriteService.swift; sourceTree = "<group>"; };
 		D677F18028A3828700254521 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D6F0472A28A3BA9400C83469 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D6F0472C28A3BA9F00C83469 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D6F0472E28A3BAAC00C83469 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		D6F0473028A3BAEC00C83469 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		D6F0473328A3BB1700C83469 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		D6F0473928A3BFC000C83469 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D6F0473B28A3C2AF00C83469 /* CustomSecaureTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecaureTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D677F19228A3925700254521 /* Appwrite in Frameworks */,
+				D658C62C28A62D2000001643 /* Appwrite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D658C62E28A6423800001643 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				D658C62F28A6424C00001643 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		D677F13428A3826300254521 = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +146,6 @@
 				D677F16A28A3828600254521 /* ViewModel */,
 				D677F17A28A3828600254521 /* Views */,
 				D677F14028A3826300254521 /* NetflixApp.swift */,
-				D677F14228A3826300254521 /* ContentView.swift */,
 				D677F14428A3826500254521 /* Assets.xcassets */,
 				D677F14628A3826500254521 /* Preview Content */,
 			);
@@ -188,7 +207,9 @@
 		D677F16E28A3828600254521 /* CommonClass */ = {
 			isa = PBXGroup;
 			children = (
+				D6F0473928A3BFC000C83469 /* CustomTextField.swift */,
 				D677F16F28A3828600254521 /* LoadingView.swift */,
+				D6F0473B28A3C2AF00C83469 /* CustomSecaureTextFieldView.swift */,
 			);
 			path = CommonClass;
 			sourceTree = "<group>";
@@ -224,7 +245,12 @@
 		D677F17A28A3828600254521 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D677F17B28A3828600254521 /* HomeView.swift */,
+				D658C62E28A6423800001643 /* HomeView */,
+				D6F0473228A3BB0300C83469 /* TitleView */,
+				D6F0472928A3BA6900C83469 /* SignUpView */,
+				D6F0472828A3BA6000C83469 /* LoginView */,
+				D6F0472728A3BA5100C83469 /* MainView */,
+				D6F0472628A3BA4700C83469 /* SplashView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +279,46 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D6F0472628A3BA4700C83469 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				D6F0473028A3BAEC00C83469 /* SplashView.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
+		D6F0472728A3BA5100C83469 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				D6F0472A28A3BA9400C83469 /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		D6F0472828A3BA6000C83469 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				D6F0472C28A3BA9F00C83469 /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		D6F0472928A3BA6900C83469 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				D6F0472E28A3BAAC00C83469 /* SignUpView.swift */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		D6F0473228A3BB0300C83469 /* TitleView */ = {
+			isa = PBXGroup;
+			children = (
+				D6F0473328A3BB1700C83469 /* TitleView.swift */,
+			);
+			path = TitleView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,7 +336,7 @@
 			);
 			name = Netflix;
 			packageProductDependencies = (
-				D677F19128A3925700254521 /* Appwrite */,
+				D658C62B28A62D2000001643 /* Appwrite */,
 			);
 			productName = Netflix;
 			productReference = D677F13D28A3826300254521 /* Netflix.app */;
@@ -345,7 +411,7 @@
 			);
 			mainGroup = D677F13428A3826300254521;
 			packageReferences = (
-				D677F19028A3925700254521 /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
+				D658C62A28A62D2000001643 /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
 			);
 			productRefGroup = D677F13E28A3826300254521 /* Products */;
 			projectDirPath = "";
@@ -394,15 +460,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F0473A28A3BFC000C83469 /* CustomTextField.swift in Sources */,
 				D677F18C28A3828700254521 /* Model.swift in Sources */,
-				D677F14328A3826300254521 /* ContentView.swift in Sources */,
-				D677F18A28A3828700254521 /* HomeView.swift in Sources */,
+				D6F0473128A3BAEC00C83469 /* SplashView.swift in Sources */,
+				D658C63028A6424C00001643 /* HomeView.swift in Sources */,
+				D6F0472B28A3BA9400C83469 /* MainView.swift in Sources */,
 				D677F18228A3828700254521 /* LoadingView.swift in Sources */,
+				D6F0472D28A3BA9F00C83469 /* LoginView.swift in Sources */,
 				D677F18328A3828700254521 /* Config.swift in Sources */,
 				D677F14128A3826300254521 /* NetflixApp.swift in Sources */,
+				D6F0472F28A3BAAC00C83469 /* SignUpView.swift in Sources */,
+				D6F0473C28A3C2AF00C83469 /* CustomSecaureTextFieldView.swift in Sources */,
 				D677F18B28A3828700254521 /* AppwriteService.swift in Sources */,
 				D677F18128A3828700254521 /* AuthViewModel.swift in Sources */,
 				D677F18428A3828700254521 /* Constant.swift in Sources */,
+				D6F0473428A3BB1700C83469 /* TitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,7 +797,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D677F19028A3925700254521 /* XCRemoteSwiftPackageReference "sdk-for-apple" */ = {
+		D658C62A28A62D2000001643 /* XCRemoteSwiftPackageReference "sdk-for-apple" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/appwrite/sdk-for-apple";
 			requirement = {
@@ -736,9 +808,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D677F19128A3925700254521 /* Appwrite */ = {
+		D658C62B28A62D2000001643 /* Appwrite */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D677F19028A3925700254521 /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
+			package = D658C62A28A62D2000001643 /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
 			productName = Appwrite;
 		};
 /* End XCSwiftPackageProductDependency section */

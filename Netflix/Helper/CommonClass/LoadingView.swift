@@ -12,8 +12,9 @@ struct LoadingView: View {
   var body: some View {
     VStack(alignment: .center, content: {
       ProgressView()
-        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+        .progressViewStyle(CircularProgressViewStyle(tint: .red))
         .scaleEffect(2)
+        .background(Color.white)
     })
   }
 }

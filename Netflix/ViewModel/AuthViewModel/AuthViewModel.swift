@@ -39,19 +39,21 @@ class AuthVM: ObservableObject {
     } catch let err {
       DispatchQueue.main.async {
         self.checkedForUser = true
-        DispatchQueue.main.async {
-          self.error = err.localizedDescription
-          self.user = nil
-        }
+        self.error = err.localizedDescription
+        self.user = nil
       }
     }
   }
 
   func create(name: String, email: String, password: String , completion: @escaping (Bool) -> Void) async  throws{
     do {
+
+      //let response : User = try await AppwriteService.shared.users.create(userId: "unique()", email: email, password: password, name: name)
       let response : User  = try await AppwriteService.shared.account.create(userId: "unique()", email: email, password: password, name: name)
       if(response.id != "") {
         completion(true)
+        self.user = response
+        kUSERDEFAULT.set(response.id, forKey: "userId")
         try await self.login(email: email, password: password, completion: { isSuccess in
         })
       }
@@ -77,26 +79,27 @@ class AuthVM: ObservableObject {
     }
   }
 
-  func loginAnonymous() async throws{
-    do {
-      let response = try await AppwriteService.shared.account.createAnonymousSession()
-      if(response.id != "") {
-        try await self.getAccount()
-      }
-    } catch let err {
-      DispatchQueue.main.async {
-        self.error = err.localizedDescription
-        self.user = nil
-      }
-    }
-  }
+  /*func loginAnonymous() async throws{
+   do {
+   //let response = try await AppwriteService.shared.account.createAnonymousSession()
+   let response = try await AppwriteService.shared.users.loginAnonymous()
+   if(response.id != "") {
+   try await self.getAccount()
+   }
+   } catch let err {
+   DispatchQueue.main.async {
+   self.error = err.localizedDescription
+   self.user = nil
+   }
+   }
+   }*/
 
   public func login(email: String, password: String , completion: @escaping (Bool) -> Void) async throws {
     do {
       let response = try await AppwriteService.shared.account.createEmailSession(email: email, password: password)
       if(response.id != "") {
-        completion(true)
         try await self.getAccount()
+        completion(true)
       }
     } catch let err {
       completion(false)

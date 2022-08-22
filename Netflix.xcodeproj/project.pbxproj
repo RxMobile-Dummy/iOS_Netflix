@@ -20,6 +20,7 @@
 		D658C64528A66DB800001643 /* AppwriteCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658C64428A66DB800001643 /* AppwriteCategoryModel.swift */; };
 		D658C64828A671CD00001643 /* MovieItemThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658C64728A671CD00001643 /* MovieItemThumbnailView.swift */; };
 		D658C64C28A672AF00001643 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658C64B28A672AF00001643 /* MovieDetailsView.swift */; };
+		D660439828AF8BFB00F8338F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D660439728AF8BFB00F8338F /* VideoView.swift */; };
 		D677F14128A3826300254521 /* NetflixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677F14028A3826300254521 /* NetflixApp.swift */; };
 		D677F14528A3826500254521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D677F14428A3826500254521 /* Assets.xcassets */; };
 		D677F14828A3826500254521 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D677F14728A3826500254521 /* Preview Assets.xcassets */; };
@@ -38,6 +39,9 @@
 		D677F18B28A3828700254521 /* AppwriteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677F17E28A3828600254521 /* AppwriteService.swift */; };
 		D6784D4A28AE4641003751DC /* WatchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6784D4928AE4641003751DC /* WatchListView.swift */; };
 		D6784D4D28AE4689003751DC /* MovieGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6784D4C28AE4689003751DC /* MovieGridView.swift */; };
+		D67C3A0D28AF9CA700CBE3D1 /* VideoFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C3A0C28AF9CA700CBE3D1 /* VideoFile.swift */; };
+		D6A5F7EC28B34F3200CB08FB /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6A5F7EB28B34F3200CB08FB /* YouTubePlayerKit */; };
+		D6A5F7EF28B3528900CB08FB /* DDLJ.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D6A5F7EE28B3528900CB08FB /* DDLJ.mp4 */; };
 		D6D9732428ACE328009021D0 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = D6D9732328ACE328009021D0 /* Appwrite */; };
 		D6F0472B28A3BA9400C83469 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0472A28A3BA9400C83469 /* MainView.swift */; };
 		D6F0472D28A3BA9F00C83469 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F0472C28A3BA9F00C83469 /* LoginView.swift */; };
@@ -83,6 +87,7 @@
 		D658C64428A66DB800001643 /* AppwriteCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppwriteCategoryModel.swift; sourceTree = "<group>"; };
 		D658C64728A671CD00001643 /* MovieItemThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemThumbnailView.swift; sourceTree = "<group>"; };
 		D658C64B28A672AF00001643 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
+		D660439728AF8BFB00F8338F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		D677F13D28A3826300254521 /* Netflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Netflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D677F14028A3826300254521 /* NetflixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixApp.swift; sourceTree = "<group>"; };
 		D677F14428A3826500254521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +109,8 @@
 		D677F17E28A3828600254521 /* AppwriteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppwriteService.swift; sourceTree = "<group>"; };
 		D6784D4928AE4641003751DC /* WatchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListView.swift; sourceTree = "<group>"; };
 		D6784D4C28AE4689003751DC /* MovieGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridView.swift; sourceTree = "<group>"; };
+		D67C3A0C28AF9CA700CBE3D1 /* VideoFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFile.swift; sourceTree = "<group>"; };
+		D6A5F7EE28B3528900CB08FB /* DDLJ.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DDLJ.mp4; sourceTree = "<group>"; };
 		D6F0472A28A3BA9400C83469 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D6F0472C28A3BA9F00C83469 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D6F0472E28A3BAAC00C83469 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
@@ -121,6 +128,7 @@
 			files = (
 				D6D9732428ACE328009021D0 /* Appwrite in Frameworks */,
 				D658C63628A6582D00001643 /* Kingfisher in Frameworks */,
+				D6A5F7EC28B34F3200CB08FB /* YouTubePlayerKit in Frameworks */,
 				AA3139FE3C0D1CD4889B2D03 /* Pods_Netflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +228,15 @@
 			path = MovieDetailsView;
 			sourceTree = "<group>";
 		};
+		D660439628AF8BE400F8338F /* VideoView */ = {
+			isa = PBXGroup;
+			children = (
+				D660439728AF8BFB00F8338F /* VideoView.swift */,
+				D67C3A0C28AF9CA700CBE3D1 /* VideoFile.swift */,
+			);
+			path = VideoView;
+			sourceTree = "<group>";
+		};
 		D677F13428A3826300254521 = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +319,7 @@
 		D677F16D28A3828600254521 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				D6A5F7ED28B3526B00CB08FB /* Video */,
 				D677F16E28A3828600254521 /* CommonClass */,
 				D677F17028A3828600254521 /* Config */,
 				D677F17228A3828600254521 /* Constant */,
@@ -351,8 +369,8 @@
 		D677F17A28A3828600254521 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D6784D4B28AE4674003751DC /* MovieGridView */,
-				D6784D4828AE462E003751DC /* WatchListView */,
+				D660439628AF8BE400F8338F /* VideoView */,
+				D6784D5128AE6629003751DC /* WatchList */,
 				D658C64A28A6726A00001643 /* MovieDetails */,
 				D658C64928A6725100001643 /* MovieList */,
 				D658C62E28A6423800001643 /* HomeView */,
@@ -405,6 +423,23 @@
 				D6784D4C28AE4689003751DC /* MovieGridView.swift */,
 			);
 			path = MovieGridView;
+			sourceTree = "<group>";
+		};
+		D6784D5128AE6629003751DC /* WatchList */ = {
+			isa = PBXGroup;
+			children = (
+				D6784D4B28AE4674003751DC /* MovieGridView */,
+				D6784D4828AE462E003751DC /* WatchListView */,
+			);
+			path = WatchList;
+			sourceTree = "<group>";
+		};
+		D6A5F7ED28B3526B00CB08FB /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				D6A5F7EE28B3528900CB08FB /* DDLJ.mp4 */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		D6DB9E9DBE74073B9CB27200 /* Pods */ = {
@@ -481,6 +516,7 @@
 			packageProductDependencies = (
 				D658C63528A6582D00001643 /* Kingfisher */,
 				D6D9732328ACE328009021D0 /* Appwrite */,
+				D6A5F7EB28B34F3200CB08FB /* YouTubePlayerKit */,
 			);
 			productName = Netflix;
 			productReference = D677F13D28A3826300254521 /* Netflix.app */;
@@ -560,6 +596,7 @@
 			packageReferences = (
 				D658C63428A6582D00001643 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D6D9732228ACE328009021D0 /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
+				D6A5F7EA28B34F3200CB08FB /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
 			);
 			productRefGroup = D677F13E28A3826300254521 /* Products */;
 			projectDirPath = "";
@@ -582,6 +619,7 @@
 				D677F18728A3828700254521 /* Raleway-Light.ttf in Resources */,
 				D677F18828A3828700254521 /* Raleway-Black.ttf in Resources */,
 				D677F18528A3828700254521 /* Raleway-Medium.ttf in Resources */,
+				D6A5F7EF28B3528900CB08FB /* DDLJ.mp4 in Resources */,
 				D677F14528A3826500254521 /* Assets.xcassets in Resources */,
 				D677F18628A3828700254521 /* Raleway-Regular.ttf in Resources */,
 			);
@@ -711,6 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67C3A0D28AF9CA700CBE3D1 /* VideoFile.swift in Sources */,
 				D658C63328A657D300001643 /* MovieItemFeaturedView.swift in Sources */,
 				D6F0473A28A3BFC000C83469 /* CustomTextField.swift in Sources */,
 				D658C64C28A672AF00001643 /* MovieDetailsView.swift in Sources */,
@@ -722,6 +761,7 @@
 				D658C64028A65D6000001643 /* MovieViewModel.swift in Sources */,
 				D658C64828A671CD00001643 /* MovieItemThumbnailView.swift in Sources */,
 				D677F18228A3828700254521 /* LoadingView.swift in Sources */,
+				D660439828AF8BFB00F8338F /* VideoView.swift in Sources */,
 				D6F0472D28A3BA9F00C83469 /* LoginView.swift in Sources */,
 				D677F18328A3828700254521 /* Config.swift in Sources */,
 				D6784D4A28AE4641003751DC /* WatchListView.swift in Sources */,
@@ -1077,6 +1117,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		D6A5F7EA28B34F3200CB08FB /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.2.0;
+			};
+		};
 		D6D9732228ACE328009021D0 /* XCRemoteSwiftPackageReference "sdk-for-apple" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/appwrite/sdk-for-apple";
@@ -1092,6 +1140,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D658C63428A6582D00001643 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		D6A5F7EB28B34F3200CB08FB /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6A5F7EA28B34F3200CB08FB /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
 		};
 		D6D9732328ACE328009021D0 /* Appwrite */ = {
 			isa = XCSwiftPackageProductDependency;

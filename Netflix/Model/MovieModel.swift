@@ -70,7 +70,6 @@ class MovieModel: Identifiable {
         self.genres = genres
         self.cast = cast
         self.imageUrl = AppwriteService.shared.client.endPoint + "/storage/buckets/62fce1d433e85bdf20e6/files/" + thumbnailImageId + "/preview?project=netflixProjectID&width=320&height=480"
-        //self.imageUrl = AppwriteService.shared.client.endPoint + "/storage/files/" + thumbnailImageId + "/preview?project=almostNetflix2&width=320&height=480"
     }
 
   public static func from(map: [String: Any]) -> MovieModel {

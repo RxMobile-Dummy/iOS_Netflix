@@ -16,5 +16,6 @@ struct LoadingView: View {
         .scaleEffect(2)
         .background(Color.white)
     })
+      .frame(width: 100, height: 100, alignment: .center)
   }
 }

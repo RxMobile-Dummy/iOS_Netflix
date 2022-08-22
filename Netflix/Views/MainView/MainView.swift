@@ -16,14 +16,13 @@ struct MainView: View {
       if !authVM.checkedForUser {
         SplashView()
       } else if authVM.user != nil {
-        SplashView()
-        HomeView()
+        HomeView().environmentObject(MoviesVM(userId: authVM.user!.id))
       } else {
         TitleView()
       }
     }
-      .animation(.easeInOut)
-      .transition(.move(edge: .bottom))
+    .animation(.easeInOut)
+    .transition(.move(edge: .bottom))
   }
 }
 

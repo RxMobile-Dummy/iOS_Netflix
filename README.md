@@ -55,6 +55,10 @@ Below is an example of how you can instruct your audience on installing and sett
   - We have made SignUp screen with proper validations for name, email and password fields.
 
   - Users can sign up using unique email address using API.
+  
+- Movie List Screen
+  
+  - We have display movies of different categories using Appwrite Database and Storage.
 
 # App UI
 
@@ -62,4 +66,4 @@ This app only works on iOS 13.0+
 ||||
 |:--:|:--:|:--:|
 |![SplashScreen](https://user-images.githubusercontent.com/108865294/184323912-3e03a57b-f59f-4a71-85d3-c301e03b2515.png)|![TitleScreen](https://user-images.githubusercontent.com/108865294/184323979-7b6ed450-208f-4f24-aa17-4e66cd87becc.png)|![SignInScreen](https://user-images.githubusercontent.com/108865294/184324058-b693a293-29f6-4813-a44c-76ce63f2a45c.png)
-|![SignUpScreen](https://user-images.githubusercontent.com/108865294/184324162-1b3ac987-caf5-4a1a-82c4-b00d6c46f450.png)
+|![SignUpScreen](https://user-images.githubusercontent.com/108865294/184324162-1b3ac987-caf5-4a1a-82c4-b00d6c46f450.png)|![Simulator Screen Shot - iPhone 11 - 2022-08-18 at 17 31 47](https://user-images.githubusercontent.com/108865294/185390072-9e8964b5-61fb-4b85-87fb-8c486c24c7f8.png)|![Simulator Screen Shot - iPhone 11 - 2022-08-18 at 17 31 55](https://user-images.githubusercontent.com/108865294/185390240-be121956-6c84-4d81-b559-8d435f554fdd.png)

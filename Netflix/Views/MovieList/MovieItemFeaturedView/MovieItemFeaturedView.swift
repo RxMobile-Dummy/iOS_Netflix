@@ -8,12 +8,16 @@
 import SwiftUI
 import Kingfisher
 
+//MARK: - MovieItem Featured View
 struct MovieItemFeaturedView: View {
-  
+
+  /// isShowingDetailView object of Bool
   @State private var isShowingDetailView = false
-  
+  /// movie object of MovieModel
   let movie: MovieModel
+  /// isInWatchlist object of Bool
   let isInWatchlist: Bool
+  /// onTapMyList call back function
   let onTapMyList: () -> Void
   
   var body: some View {
@@ -32,21 +36,21 @@ struct MovieItemFeaturedView: View {
             onTapMyList()
           } label: {
             VStack {
-              Image(systemName: self.isInWatchlist ? "checkmark" :"plus")
-              Text("My List")
+              Image(systemName: self.isInWatchlist ? kIMG_CHECKMARK : kIMG_PLUS)
+              Text(kMYLIST)
             }
             .padding()
           }
           .foregroundColor(.white)
           .cornerRadius(4)
-          
+          /// Navigate to MovieDetails View
           NavigationLink(destination: MovieDetailsView(movie: movie), isActive: $isShowingDetailView) { EmptyView() }
           Button {
             self.isShowingDetailView = true
           } label: {
             VStack {
-              Image(systemName: "info.circle")
-              Text("Info")
+              Image(systemName: kIMG_INFO_CIRCLE)
+              Text(kINFO)
             }
             .padding()
           }

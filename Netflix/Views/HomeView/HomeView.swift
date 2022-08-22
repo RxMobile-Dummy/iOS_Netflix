@@ -7,16 +7,19 @@
 
 import SwiftUI
 
+//MARK: - HomeView
 struct HomeView: View {
   
+  /// moviesVM object of MoviesVM
   @EnvironmentObject var moviesVM: MoviesVM
-
+  
   var body: some View {
     NavigationView {
       ZStack {
         Color(.black).ignoresSafeArea()
         ScrollView(.vertical, showsIndicators: false) {
           if(moviesVM.featured != nil) {
+            /// MovieItem Featured View
             MovieItemFeaturedView(
               movie: moviesVM.featured!,
               isInWatchlist: moviesVM.watchList.contains(moviesVM.featured!.id),
@@ -26,8 +29,9 @@ struct HomeView: View {
                 }
               }
             )
-          } else if(!((moviesVM.movies["movies"] ?? []).isEmpty)) {
-            let movie = (moviesVM.movies["movies"]!).first!
+          } else if(!((moviesVM.movies[kCOLLECTIONID_MOVIES] ?? []).isEmpty)) {
+            let movie = (moviesVM.movies[kCOLLECTIONID_MOVIES]!).first!
+            /// MovieItem Featured View
             MovieItemFeaturedView(
               movie: movie,
               isInWatchlist: moviesVM.watchList.contains(movie.id),
@@ -51,11 +55,10 @@ struct HomeView: View {
       }
       .ignoresSafeArea(.all, edges: .top)
       .foregroundColor(Color.white)
-      .navigationBarTitle("Movies")
       .toolbar {
         ToolbarItemGroup(placement: .navigationBarTrailing) {
           NavigationLink(destination: WatchListView()) {
-            Text("My List")
+            Text(kMYLIST)
               .frame(width: 100, height: 20, alignment: .center)
               .background(.white)
               .cornerRadius(5.0)
@@ -67,14 +70,20 @@ struct HomeView: View {
     }
   }
   
+  //MARK: - Add to WatchList Method
+  /**
+   - Parameter movieId : Object of String
+   */
   func onTapMyList(_ movieId: String) async -> Void {
     await moviesVM.addToMyList(movieId)
   }
   
 }
 
+//MARK: - HomeView Previews
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
 }
+

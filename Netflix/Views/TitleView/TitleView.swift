@@ -7,32 +7,35 @@
 
 import SwiftUI
 
+//MARK: - TitleView
 struct TitleView: View {
+
+  /// selection object of String
   @State private var selection: String? = nil
   
   var body: some View {
     NavigationView {
       VStack {
         
-        Text("Almost Netflix")
+        Text(kALMOST_NETFLIX)
           .foregroundColor(.white)
           .font(.largeTitle)
           .bold()
           .padding(.top)
         
-        Text("Almost the best Netflix clone.")
+        Text(kALMOST_THE_BEST_NETFLIX_CLONE)
           .foregroundColor(.white)
           .font(.title2)
           .bold()
           .padding(.top)
           .padding(.bottom)
         
-        NavigationLink(destination: LoginView(), tag: "Sign In", selection: $selection) {}
+        NavigationLink(destination: LoginView(), tag: kSIGNIN, selection: $selection) {}
         .navigationTitle("")
-        NavigationLink(destination: SignUpView(), tag: "Sign Up", selection: $selection) {}
+        NavigationLink(destination: SignUpView(), tag: kSIGNUP, selection: $selection) {}
         .navigationTitle("")
         
-        Button("Sign In") {
+        Button(kSIGNIN) {
           self.selection = "Sign In"
         }
         .foregroundColor(.white)
@@ -41,7 +44,7 @@ struct TitleView: View {
         .background(Color.red)
         .cornerRadius(8.0)
         
-        Button("Sign Up") {
+        Button(kSIGNUP) {
           self.selection = "Sign Up"
         }
         .foregroundColor(.red)
@@ -54,7 +57,7 @@ struct TitleView: View {
       .padding()
       .frame(maxHeight: .infinity)
       .background(
-        Image("Background")
+        Image(kIMG_BACKGROUND)
           .resizable()
           .aspectRatio(contentMode: .fill)
           .edgesIgnoringSafeArea(.vertical)
@@ -64,6 +67,7 @@ struct TitleView: View {
   }
 }
 
+//MARK: - Title View Previews
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
         TitleView()

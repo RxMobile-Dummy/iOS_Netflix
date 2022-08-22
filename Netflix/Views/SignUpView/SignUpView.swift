@@ -7,52 +7,60 @@
 
 import SwiftUI
 
+//MARK: - SignUp View
 struct SignUpView: View {
-  
+
+  /// name object of String
   @State private var name = ""
+  /// email object of String
   @State private var email = ""
+  /// password object of String
   @State private var password = ""
-  
+  /// authVM object of AuthVM
   @EnvironmentObject var authVM: AuthVM
-  
   /// isLoading static private object of Bool
   @State private var isLoading = false
-  
+  /// strError static private object of String
+  @State private var strError = ""
+
   var body: some View {
     ZStack {
       VStack {
-        
-        Text("Sign Up")
+        Text(kSIGNUP)
           .foregroundColor(.white)
           .font(.largeTitle)
           .bold()
           .padding(.top)
         
-        CustomTextField(placeHolder: Text("Name").foregroundColor(Color.white), text: self.$name)
+        CustomTextField(placeHolder: Text(kNAME).foregroundColor(Color.white), text: self.$name)
           .padding()
           .background(Color.gray.opacity(0.2))
           .foregroundColor(Color.white)
           .cornerRadius(8.0)
         
-        CustomTextField(placeHolder: Text("E-mail").foregroundColor(Color.white), text: self.$email)
+        CustomTextField(placeHolder: Text(kEMAIL).foregroundColor(Color.white), text: self.$email)
           .padding()
           .background(Color.gray.opacity(0.2))
           .foregroundColor(Color.white)
           .cornerRadius(8.0)
         
-        CustomSecaureTextField(placeHolder: Text("Password").foregroundColor(Color.white), text: self.$password)
+        CustomSecaureTextField(placeHolder: Text(kPASSWORD).foregroundColor(Color.white), text: self.$password)
           .padding()
           .background(Color.gray.opacity(0.2))
           .foregroundColor(Color.white)
           .cornerRadius(8.0)
         
-        Button("Sign Up") {
+        Button(kSIGNUP) {
           Task {
             do {
               isLoading = true
-              try await authVM.create(name: name, email: email, password: password, completion: { isSuccess in
+              try await authVM.create(name: name, email: email, password: password, completion: { isSuccess,error  in
                 if(isSuccess == true) {
                   isLoading = false
+                  strError = error
+                } else {
+                  isLoading = false
+                  strError = error
                 }
               })
             } catch{
@@ -65,11 +73,17 @@ struct SignUpView: View {
         .background(Color.red)
         .cornerRadius(8.0)
         
+        
+        Text(strError)
+          .bold()
+          .foregroundColor(.white)
+          .font(.headline)
+        
       }
       .padding()
       .frame(maxHeight: .infinity)
       .background(
-        Image("Background")
+        Image(kIMG_BACKGROUND)
           .resizable()
           .aspectRatio(contentMode: .fill)
           .edgesIgnoringSafeArea(.vertical)
